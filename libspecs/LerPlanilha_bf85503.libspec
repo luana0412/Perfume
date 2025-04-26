@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="LerPlanilha" type="LIBRARY" format="ROBOT" scope="GLOBAL" namedargs="true" generated="2024-05-13T16:10:50Z" specversion="2" source="C:\GIT\SIMPR\SIMPR-teste-certificacao\SIMPR\Resources\Lib\LerPlanilha.py" lineno="1">
+<version />
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``LerPlanilha``.</doc>
+<kw name="Copiar Texto" lineno="12">
+<arguments>
+<arg>texto: str</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Ler Dado Celula" lineno="7">
+<arguments>
+<arg>aba: str</arg>
+<arg>celula: str</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Load Workbook" source="C:\Users\f978268\GIT\venv\lib\site-packages\openpyxl\reader\excel.py" lineno="314">
+<arguments>
+<arg>filename</arg>
+<arg>read_only=False</arg>
+<arg>keep_vba=False</arg>
+<arg>data_only=False</arg>
+<arg>keep_links=True</arg>
+<arg>rich_text=False</arg>
+</arguments>
+<doc>Open the given filename and return the workbook
+
+:param filename: the path to open or a file-like object
+:type filename: string or a file-like object open in binary mode c.f., :class:`zipfile.ZipFile`
+
+:param read_only: optimised for reading, content cannot be edited
+:type read_only: bool
+
+:param keep_vba: preserve vba content (this does NOT mean you can use it)
+:type keep_vba: bool
+
+:param data_only: controls whether cells with formulae have either the formula (default) or the value stored the last time Excel read the sheet
+:type data_only: bool
+
+:param keep_links: whether links to external workbooks should be preserved. The default is True
+:type keep_links: bool
+
+:param rich_text: if set to True openpyxl will preserve any rich text formatting in cells. The default is False
+:type rich_text: bool
+
+:rtype: :class:`openpyxl.workbook.Workbook`
+
+.. note::
+
+    When using lazy load, all worksheets will be :class:`openpyxl.worksheet.iter_worksheet.IterableWorksheet`
+    and the returned workbook will be read-only.</doc>
+</kw>
+</keywordspec>

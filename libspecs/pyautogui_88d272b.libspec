@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="pyautogui" type="LIBRARY" format="ROBOT" scope="GLOBAL" namedargs="true" generated="2024-05-13T16:10:51Z" specversion="2" source="C:\GIT\SIMPR\SIMPR-teste-certificacao\SIMPR\Resources\Lib\pyautogui\__init__.py" lineno="1">
+<version>0.9.53</version>
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``pyautogui``.</doc>
+<kw name="Alert" source="C:\Users\f978268\GIT\venv\lib\site-packages\pymsgbox\_native_win.py" lineno="53">
+<arguments>
+<arg>text=</arg>
+<arg>title=</arg>
+<arg>button=OK</arg>
+<arg>root=None</arg>
+<arg>timeout=None</arg>
+<arg>icon=0</arg>
+<arg>_tkinter=False</arg>
+</arguments>
+<doc>Displays a simple message box with text and a single OK button. Returns the text of the button clicked on.</doc>
+</kw>
+<kw name="Center" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Click" lineno="944">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>clicks=1</arg>
+<arg>interval=0.0</arg>
+<arg>button=primary</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs pressing a mouse button down and then immediately releasing it. Returns ``None``.
+
+When no arguments are passed, the primary mouse button is clicked at the mouse cursor's current location.
+
+If integers for ``x`` and ``y`` are passed, the click will happen at that XY coordinate. If ``x`` is a string, the
+string is an image filename that PyAutoGUI will attempt to locate on the screen and click the center of. If ``x``
+is a sequence of two coordinates, those coordinates will be used for the XY coordinate to click on.
+
+The ``clicks`` argument is an int of how many clicks to make, and defaults to ``1``.
+
+The ``interval`` argument is an int or float of how many seconds to wait in between each click, if ``clicks`` is
+greater than ``1``. It defaults to ``0.0`` for no pause in between clicks.
+
+The ``button`` argument is one of the constants ``LEFT``, ``MIDDLE``, ``RIGHT``, ``PRIMARY``, or ``SECONDARY``.
+It defaults to ``PRIMARY`` (which is the left mouse button, unless the operating system has been set for
+left-handed users.)
+
+If ``x`` and ``y`` are specified, and the click is not happening at the mouse cursor's current location, then
+the ``duration`` argument is an int or float of how many seconds it should take to move the mouse to the XY
+coordinates. It defaults to ``0`` for an instant move.
+
+If ``x`` and ``y`` are specified and ``duration`` is not ``0``, the ``tween`` argument is a tweening function
+that specifies the movement pattern of the mouse cursor as it moves to the XY coordinates. The default is a
+simple linear tween. See the PyTweening module documentation for more details.
+
+The ``pause`` parameter is deprecated. Call the ``pyautogui.sleep()`` function to implement a pause.
+
+Raises:
+  PyAutoGUIException: If button is not one of 'left', 'middle', 'right', 1, 2, 3</doc>
+</kw>
+<kw name="Confirm" source="C:\Users\f978268\GIT\venv\lib\site-packages\pymsgbox\_native_win.py" lineno="73">
+<arguments>
+<arg>text=</arg>
+<arg>title=</arg>
+<arg>buttons=('OK', 'Cancel')</arg>
+<arg>root=None</arg>
+<arg>timeout=None</arg>
+<arg>icon=32</arg>
+<arg>_tkinter=False</arg>
+</arguments>
+<doc>Displays a message box with OK and Cancel buttons. Number and text of buttons can be customized. Returns the text of the button clicked on.</doc>
+</kw>
+<kw name="Contextmanager" source="C:\Users\f978268\AppData\Local\Programs\Python\Python310\lib\contextlib.py" lineno="252">
+<arguments>
+<arg>func</arg>
+</arguments>
+<doc>@contextmanager decorator.
+
+Typical usage:
+
+    @contextmanager
+    def some_generator(&lt;arguments&gt;):
+        &lt;setup&gt;
+        try:
+            yield &lt;value&gt;
+        finally:
+            &lt;cleanup&gt;
+
+This makes this:
+
+    with some_generator(&lt;arguments&gt;) as &lt;variable&gt;:
+        &lt;body&gt;
+
+equivalent to this:
+
+    &lt;setup&gt;
+    try:
+        &lt;variable&gt; = &lt;value&gt;
+        &lt;body&gt;
+    finally:
+        &lt;cleanup&gt;</doc>
+</kw>
+<kw name="Countdown" lineno="1797">
+<arguments>
+<arg>seconds</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Display Mouse Position" lineno="1727">
+<arguments>
+<arg>xOffset=0</arg>
+<arg>yOffset=0</arg>
+</arguments>
+<doc>This function is meant to be run from the command line. It will
+automatically display the location and RGB of the mouse cursor.</doc>
+</kw>
+<kw name="Double Click" lineno="1085">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>interval=0.0</arg>
+<arg>button=left</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a double click.
+
+This is a wrapper function for click('left', x, y, 2, interval).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+  interval (float, optional): The number of seconds in between each click,
+    if the number of clicks is greater than 1. 0.0 by default, for no
+    pause in between clicks.
+  button (str, int, optional): The mouse button released. TODO
+
+Returns:
+  None
+
+Raises:
+  PyAutoGUIException: If button is not one of 'left', 'middle', 'right', 1, 2, 3, 4,
+    5, 6, or 7</doc>
+</kw>
+<kw name="Drag" lineno="1361">
+<arguments>
+<arg>xOffset=0</arg>
+<arg>yOffset=0</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>button=primary</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+<arg>mouseDownUp=True</arg>
+</arguments>
+<doc>Performs a mouse drag (mouse movement while a button is held down) to a
+point on the screen, relative to its current position.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): How far left (for negative values) or
+    right (for positive values) to move the cursor. 0 by default. If tuple, this is used for xOffset and yOffset.
+  y (int, float, None, optional): How far up (for negative values) or
+    down (for positive values) to move the cursor. 0 by default.
+  duration (float, optional): The amount of time it takes to move the mouse
+    cursor to the new xy coordinates. If 0, then the mouse cursor is moved
+    instantaneously. 0.0 by default.
+  tween (func, optional): The tweening function used if the duration is not
+    0. A linear tween is used by default.
+  button (str, int, optional): The mouse button released. TODO
+  mouseDownUp (True, False): When true, the mouseUp/Down actions are not performed.
+    Which allows dragging over multiple (small) actions. 'True' by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Drag Rel" lineno="1361">
+<arguments>
+<arg>xOffset=0</arg>
+<arg>yOffset=0</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>button=primary</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+<arg>mouseDownUp=True</arg>
+</arguments>
+<doc>Performs a mouse drag (mouse movement while a button is held down) to a
+point on the screen, relative to its current position.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): How far left (for negative values) or
+    right (for positive values) to move the cursor. 0 by default. If tuple, this is used for xOffset and yOffset.
+  y (int, float, None, optional): How far up (for negative values) or
+    down (for positive values) to move the cursor. 0 by default.
+  duration (float, optional): The amount of time it takes to move the mouse
+    cursor to the new xy coordinates. If 0, then the mouse cursor is moved
+    instantaneously. 0.0 by default.
+  tween (func, optional): The tweening function used if the duration is not
+    0. A linear tween is used by default.
+  button (str, int, optional): The mouse button released. TODO
+  mouseDownUp (True, False): When true, the mouseUp/Down actions are not performed.
+    Which allows dragging over multiple (small) actions. 'True' by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Drag To" lineno="1320">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>button=primary</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+<arg>mouseDownUp=True</arg>
+</arguments>
+<doc>Performs a mouse drag (mouse movement while a button is held down) to a
+point on the screen.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): How far left (for negative values) or
+    right (for positive values) to move the cursor. 0 by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): How far up (for negative values) or
+    down (for positive values) to move the cursor. 0 by default.
+  duration (float, optional): The amount of time it takes to move the mouse
+    cursor to the new xy coordinates. If 0, then the mouse cursor is moved
+    instantaneously. 0.0 by default.
+  tween (func, optional): The tweening function used if the duration is not
+    0. A linear tween is used by default.
+  button (str, int, optional): The mouse button released. TODO
+  mouseDownUp (True, False): When true, the mouseUp/Down actions are not performed.
+    Which allows dragging over multiple (small) actions. 'True' by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Ease In Back" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="552">
+<arguments>
+<arg>n</arg>
+<arg>s=1.70158</arg>
+</arguments>
+<doc>A tween function that backs up first at the start and then goes to the destination.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Bounce" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="599">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A bouncing tween function that begins bouncing and then jumps to the destination.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Circ" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="457">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A circular tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Cubic" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="176">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A cubic tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Elastic" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="502">
+<arguments>
+<arg>n</arg>
+<arg>amplitude=1</arg>
+<arg>period=0.3</arg>
+</arguments>
+<doc>An elastic tween function that begins with an increasing wobble and then snaps into the destination.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Expo" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="401">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>An exponential tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Back" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="579">
+<arguments>
+<arg>n</arg>
+<arg>s=1.70158</arg>
+</arguments>
+<doc>A "back-in" tween function that overshoots both the start and destination.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Bounce" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="635">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A bouncing tween function that bounces at the start and end.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Circ" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="484">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A circular tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Cubic" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="203">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A cubic tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Elastic" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="535">
+<arguments>
+<arg>n</arg>
+<arg>amplitude=1</arg>
+<arg>period=0.5</arg>
+</arguments>
+<doc>An elastic tween function wobbles towards the midpoint.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Expo" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="433">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>An exponential tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Quad" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="159">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quadratic tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Quart" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="248">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quartic tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Quint" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="293">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quintic tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Out Sine" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="388">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A sinusoidal tween function that accelerates, reaches the midpoint, and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Quad" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="133">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quadratic tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Quart" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="221">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quartic tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Quint" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="266">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quintic tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease In Sine" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="362">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A sinusoidal tween function that begins slow and then accelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Back" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="565">
+<arguments>
+<arg>n</arg>
+<arg>s=1.70158</arg>
+</arguments>
+<doc>A tween function that overshoots the destination a little and then backs into the destination.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Bounce" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="612">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A bouncing tween function that hits the destination and then bounces to rest.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Circ" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="470">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A circular tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Cubic" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="189">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A cubic tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Elastic" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="515">
+<arguments>
+<arg>n</arg>
+<arg>amplitude=1</arg>
+<arg>period=0.3</arg>
+</arguments>
+<doc>An elastic tween function that overshoots the destination and then "rubber bands" into the destination.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Expo" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="417">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>An exponential tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Quad" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="146">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quadratic tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Quart" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="234">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quartic tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Quint" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="279">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A quintic tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Ease Out Sine" source="C:\Users\f978268\GIT\venv\lib\site-packages\pytweening\__init__.py" lineno="375">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>A sinusoidal tween function that begins fast and then decelerates.
+
+Args:
+  n (float): The time progress, starting at 0.0 and ending at 1.0.
+
+Returns:
+  (float) The line progress, starting at 0.0 and ending at 1.0. Suitable for passing to getPointOnLine().</doc>
+</kw>
+<kw name="Fail Safe Check" lineno="1720">
+<arguments>
+</arguments>
+<doc />
+</kw>
+<kw name="Get Active Window" source="C:\Users\f978268\GIT\venv\lib\site-packages\pygetwindow\_pygetwindow_win.py" lineno="102">
+<arguments>
+</arguments>
+<doc>Returns a Window object of the currently active (focused) Window.</doc>
+</kw>
+<kw name="Get Active Window Title" source="C:\Users\f978268\GIT\venv\lib\site-packages\pygetwindow\_pygetwindow_win.py" lineno="112">
+<arguments>
+</arguments>
+<doc>Returns a string of the title text of the currently active (focused) Window.</doc>
+</kw>
+<kw name="Get All Titles" source="C:\Users\f978268\GIT\venv\lib\site-packages\pygetwindow\_pygetwindow_win.py" lineno="157">
+<arguments>
+</arguments>
+<doc>Returns a list of strings of window titles for all visible windows.</doc>
+</kw>
+<kw name="Get All Windows" source="C:\Users\f978268\GIT\venv\lib\site-packages\pygetwindow\_pygetwindow_win.py" lineno="163">
+<arguments>
+</arguments>
+<doc>Returns a list of Window objects for all visible windows.</doc>
+</kw>
+<kw name="Get Info" lineno="2151">
+<arguments>
+</arguments>
+<doc />
+</kw>
+<kw name="Get Point On Line" lineno="609">
+<arguments>
+<arg>x1</arg>
+<arg>y1</arg>
+<arg>x2</arg>
+<arg>y2</arg>
+<arg>n</arg>
+</arguments>
+<doc>Returns an (x, y) tuple of the point that has progressed a proportion ``n`` along the line defined by the two
+``x1``, ``y1`` and ``x2``, ``y2`` coordinates.
+
+This function was copied from pytweening module, so that it can be called even if PyTweening is not installed.</doc>
+</kw>
+<kw name="Get Windows At" source="C:\Users\f978268\GIT\venv\lib\site-packages\pygetwindow\_pygetwindow_win.py" lineno="135">
+<arguments>
+<arg>x</arg>
+<arg>y</arg>
+</arguments>
+<doc>Returns a list of Window objects whose windows contain the point ``(x, y)``.
+
+* ``x`` (int, optional): The x position of the window(s).
+* ``y`` (int, optional): The y position of the window(s).</doc>
+</kw>
+<kw name="Get Windows With Title" source="C:\Users\f978268\GIT\venv\lib\site-packages\pygetwindow\_pygetwindow_win.py" lineno="147">
+<arguments>
+<arg>title</arg>
+</arguments>
+<doc>Returns a list of Window objects that substring match ``title`` in their title text.</doc>
+</kw>
+<kw name="Grab" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Hold" lineno="1616">
+<arguments>
+<arg>keys</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Context manager that performs a keyboard key press down upon entry,
+followed by a release upon exit.
+
+Args:
+  key (str, list): The key to be pressed. The valid names are listed in
+  KEYBOARD_KEYS. Can also be a list of such strings.
+  pause (float, optional): How many seconds in the end of function process.
+  None by default, for no pause in the end of function process.
+Returns:
+  None</doc>
+</kw>
+<kw name="Hotkey" lineno="1689">
+<arguments>
+<arg>*args</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc>Performs key down presses on the arguments passed in order, then performs
+key releases in reverse order.
+
+The effect is that calling hotkey('ctrl', 'shift', 'c') would perform a
+"Ctrl-Shift-C" hotkey/keyboard shortcut press.
+
+Args:
+  key(s) (str): The series of keys to press, in order. This can also be a
+    list of key strings to press.
+  interval (float, optional): The number of seconds in between each press.
+    0.0 by default, for no pause in between presses.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Hscroll" lineno="1200">
+<arguments>
+<arg>clicks</arg>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs an explicitly horizontal scroll of the mouse scroll wheel,
+if this is supported by the operating system. (Currently just Linux.)
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  clicks (int, float): The amount of scrolling to perform.
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Is Shift Character" lineno="530">
+<arguments>
+<arg>character</arg>
+</arguments>
+<doc>Returns True if the ``character`` is a keyboard key that would require the shift key to be held down, such as
+uppercase letters or the symbols on the keyboard's number row.</doc>
+</kw>
+<kw name="Is Valid Key" lineno="1516">
+<arguments>
+<arg>key</arg>
+</arguments>
+<doc>Returns a Boolean value if the given key is a valid value to pass to
+PyAutoGUI's keyboard-related functions for the current platform.
+
+This function is here because passing an invalid value to the PyAutoGUI
+keyboard functions currently is a no-op that does not raise an exception.
+
+Some keys are only valid on some platforms. For example, while 'esc' is
+valid for the Escape key on all platforms, 'browserback' is only used on
+Windows operating systems.
+
+Args:
+  key (str): The key value.
+
+Returns:
+  bool: True if key is a valid value, False if not.</doc>
+</kw>
+<kw name="Key Down" lineno="1537">
+<arguments>
+<arg>key</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a keyboard key press without the release. This will put that
+key in a held down state.
+
+NOTE: For some reason, this does not seem to cause key repeats like would
+happen if a keyboard key was held down on a text field.
+
+Args:
+  key (str): The key to be pressed down. The valid names are listed in
+  KEYBOARD_KEYS.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Key Up" lineno="1559">
+<arguments>
+<arg>key</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a keyboard key release (without the press down beforehand).
+
+Args:
+  key (str): The key to be released up. The valid names are listed in
+  KEYBOARD_KEYS.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Left Click" lineno="1002">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>interval=0.0</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a left mouse button click.
+
+This is a wrapper function for click('left', x, y).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+  interval (float, optional): The number of seconds in between each click,
+    if the number of clicks is greater than 1. 0.0 by default, for no
+    pause in between clicks.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Linear" lineno="621">
+<arguments>
+<arg>n</arg>
+</arguments>
+<doc>Returns ``n``, where ``n`` is the float argument between ``0.0`` and ``1.0``. This function is for the default
+linear tween for mouse moving functions.
+
+This function was copied from PyTweening module, so that it can be called even if PyTweening is not installed.</doc>
+</kw>
+<kw name="Locate" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Locate All" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Locate All On Screen" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Locate Center On Screen" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Locate On Screen" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Locate On Window" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Middle Click" lineno="1060">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>interval=0.0</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a middle mouse button click.
+
+This is a wrapper function for click('middle', x, y).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Mouse Down" lineno="878">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>button=primary</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs pressing a mouse button down (but not up).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    mouse down happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    mouse down happens. None by default.
+  button (str, int, optional): The mouse button pressed down. TODO
+
+Returns:
+  None
+
+Raises:
+  PyAutoGUIException: If button is not one of 'left', 'middle', 'right', 1, 2, or 3</doc>
+</kw>
+<kw name="Mouse Info" lineno="251">
+<arguments>
+</arguments>
+<doc>Launches the MouseInfo app. This application provides mouse coordinate information which can be useful when
+planning GUI automation tasks. This function blocks until the application is closed.</doc>
+</kw>
+<kw name="Mouse Up" lineno="911">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>button=primary</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs releasing a mouse button up (but not down beforehand).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    mouse up happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    mouse up happens. None by default.
+  button (str, int, optional): The mouse button released. TODO
+
+Returns:
+  None
+
+Raises:
+  PyAutoGUIException: If button is not one of 'left', 'middle', 'right', 1, 2, or 3</doc>
+</kw>
+<kw name="Move" lineno="1287">
+<arguments>
+<arg>xOffset=None</arg>
+<arg>yOffset=None</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=False</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Moves the mouse cursor to a point on the screen, relative to its current
+position.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): How far left (for negative values) or
+    right (for positive values) to move the cursor. 0 by default. If tuple, this is used for x and y.
+  y (int, float, None, optional): How far up (for negative values) or
+    down (for positive values) to move the cursor. 0 by default.
+  duration (float, optional): The amount of time it takes to move the mouse
+    cursor to the new xy coordinates. If 0, then the mouse cursor is moved
+    instantaneously. 0.0 by default.
+  tween (func, optional): The tweening function used if the duration is not
+    0. A linear tween is used by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Move Rel" lineno="1287">
+<arguments>
+<arg>xOffset=None</arg>
+<arg>yOffset=None</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=False</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Moves the mouse cursor to a point on the screen, relative to its current
+position.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): How far left (for negative values) or
+    right (for positive values) to move the cursor. 0 by default. If tuple, this is used for x and y.
+  y (int, float, None, optional): How far up (for negative values) or
+    down (for positive values) to move the cursor. 0 by default.
+  duration (float, optional): The amount of time it takes to move the mouse
+    cursor to the new xy coordinates. If 0, then the mouse cursor is moved
+    instantaneously. 0.0 by default.
+  tween (func, optional): The tweening function used if the duration is not
+    0. A linear tween is used by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Move To" lineno="1256">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=False</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Moves the mouse cursor to a point on the screen.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+  duration (float, optional): The amount of time it takes to move the mouse
+    cursor to the xy coordinates. If 0, then the mouse cursor is moved
+    instantaneously. 0.0 by default.
+  tween (func, optional): The tweening function used if the duration is not
+    0. A linear tween is used by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="On Screen" lineno="784">
+<arguments>
+<arg>x</arg>
+<arg>y=None</arg>
+</arguments>
+<doc>Returns whether the given xy coordinates are on the primary screen or not.
+
+Note that this function doesn't work for secondary screens.
+
+Args:
+  Either the arguments are two separate values, first arg for x and second
+    for y, or there is a single argument of a sequence with two values, the
+    first x and the second y.
+    Example: onScreen(x, y) or onScreen([x, y])
+
+Returns:
+  bool: True if the xy coordinates are on the screen at its current
+    resolution, otherwise False.</doc>
+</kw>
+<kw name="Password" source="C:\Users\f978268\GIT\venv\lib\site-packages\pymsgbox\__init__.py" lineno="154">
+<arguments>
+<arg>text=</arg>
+<arg>title=</arg>
+<arg>default=</arg>
+<arg>mask=*</arg>
+<arg>root=None</arg>
+<arg>timeout=None</arg>
+</arguments>
+<doc>Displays a message box with text input, and OK &amp; Cancel buttons. Typed characters appear as *. Returns the text entered, or None if Cancel was clicked.</doc>
+</kw>
+<kw name="Pixel" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Pixel Matches Color" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Position" lineno="750">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+</arguments>
+<doc>Returns the current xy coordinates of the mouse cursor as a two-integer tuple.
+
+Args:
+  x (int, None, optional) - If not None, this argument overrides the x in
+    the return value.
+  y (int, None, optional) - If not None, this argument overrides the y in
+    the return value.
+
+Returns:
+  (x, y) tuple of the current xy coordinates of the mouse cursor.
+
+NOTE: The position() function doesn't check for failsafe.</doc>
+</kw>
+<kw name="Press" lineno="1577">
+<arguments>
+<arg>keys</arg>
+<arg>presses=1</arg>
+<arg>interval=0.0</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a keyboard key press down, followed by a release.
+
+Args:
+  key (str, list): The key to be pressed. The valid names are listed in
+  KEYBOARD_KEYS. Can also be a list of such strings.
+  presses (integer, optional): The number of press repetitions.
+  1 by default, for just one press.
+  interval (float, optional): How many seconds between each press.
+  0.0 by default, for no pause between presses.
+  pause (float, optional): How many seconds in the end of function process.
+  None by default, for no pause in the end of function process.
+Returns:
+  None</doc>
+</kw>
+<kw name="Print Info" lineno="2138">
+<arguments>
+<arg>dontPrint=False</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Prompt" source="C:\Users\f978268\GIT\venv\lib\site-packages\pymsgbox\__init__.py" lineno="142">
+<arguments>
+<arg>text=</arg>
+<arg>title=</arg>
+<arg>default=</arg>
+<arg>root=None</arg>
+<arg>timeout=None</arg>
+</arguments>
+<doc>Displays a message box with text input, and OK &amp; Cancel buttons. Returns the text entered, or None if Cancel was clicked.</doc>
+</kw>
+<kw name="Raise Py Auto GUI Image Not Found Exception" lineno="165">
+<arguments>
+<arg>wrappedFunction</arg>
+</arguments>
+<doc>A decorator that wraps PyScreeze locate*() functions so that the PyAutoGUI user sees them raise PyAutoGUI's
+ImageNotFoundException rather than PyScreeze's ImageNotFoundException. This is because PyScreeze should be
+invisible to PyAutoGUI users.</doc>
+</kw>
+<kw name="Right Click" lineno="1032">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>interval=0.0</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a right mouse button click.
+
+This is a wrapper function for click('right', x, y).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+  interval (float, optional): The number of seconds in between each click,
+    if the number of clicks is greater than 1. 0.0 by default, for no
+    pause in between clicks.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Run" lineno="2077">
+<arguments>
+<arg>commandStr</arg>
+<arg>_ssCount=None</arg>
+</arguments>
+<doc>Run a series of PyAutoGUI function calls according to a mini-language
+made for this function. The `commandStr` is composed of character
+commands that represent PyAutoGUI function calls.
+
+For example, `run('ccg-20,+0c')` clicks the mouse twice, then makes
+the mouse cursor go 20 pixels to the left, then click again.
+
+Whitespace between commands and arguments is ignored. Command characters
+must be lowercase. Quotes must be single quotes.
+
+For example, the previous call could also be written as `run('c c g -20, +0 c')`.
+
+The character commands and their equivalents are here:
+
+`c` =&gt; `click(button=PRIMARY)`
+`l` =&gt; `click(button=LEFT)`
+`m` =&gt; `click(button=MIDDLE)`
+`r` =&gt; `click(button=RIGHT)`
+`su` =&gt; `scroll(1) # scroll up`
+`sd` =&gt; `scroll(-1) # scroll down`
+`ss` =&gt; `screenshot('screenshot1.png') # filename number increases on its own`
+
+`gX,Y` =&gt; `moveTo(X, Y)`
+`g+X,-Y` =&gt; `move(X, Y) # The + or - prefix is the difference between move() and moveTo()`
+`dX,Y` =&gt; `dragTo(X, Y)`
+`d+X,-Y` =&gt; `drag(X, Y) # The + or - prefix is the difference between drag() and dragTo()`
+
+`k'key'` =&gt; `press('key')`
+`w'text'` =&gt; `write('text')`
+`h'key,key,key'` =&gt; `hotkey(*'key,key,key'.replace(' ', '').split(','))`
+`a'hello'` =&gt; `alert('hello')`
+
+`sN` =&gt; `sleep(N) # N can be an int or float`
+`pN` =&gt; `PAUSE = N # N can be an int or float`
+
+`fN(commands)` =&gt; for i in range(N): run(commands)
+
+Note that any changes to `PAUSE` with the `p` command will be undone when
+this function returns. The original `PAUSE` setting will be reset.
+
+TODO - This function is under development.</doc>
+</kw>
+<kw name="Screenshot" lineno="226">
+<arguments>
+<arg>*unused_args</arg>
+<arg>**unsed_kwargs</arg>
+</arguments>
+<doc>This function raises ``PyAutoGUIException``. It's used for the PyScreeze function names if the PyScreeze module
+failed to be imported.</doc>
+</kw>
+<kw name="Scroll" lineno="1170">
+<arguments>
+<arg>clicks</arg>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a scroll of the mouse scroll wheel.
+
+Whether this is a vertical or horizontal scroll depends on the underlying
+operating system.
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  clicks (int, float): The amount of scrolling to perform.
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Size" lineno="775">
+<arguments>
+</arguments>
+<doc>Returns the width and height of the screen as a two-integer tuple.
+
+Returns:
+  (width, height) tuple of the screen size, in pixels.</doc>
+</kw>
+<kw name="Sleep" lineno="1793">
+<arguments>
+<arg>seconds</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Triple Click" lineno="1128">
+<arguments>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>interval=0.0</arg>
+<arg>button=left</arg>
+<arg>duration=0.0</arg>
+<arg>tween=&lt;function linear at 0x000001F7EBD2F370&gt;</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a triple click.
+
+This is a wrapper function for click('left', x, y, 3, interval).
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+    If x is a str, it's considered a filename of an image to find on
+    the screen with locateOnScreen() and click the center of.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+  interval (float, optional): The number of seconds in between each click,
+    if the number of clicks is greater than 1. 0.0 by default, for no
+    pause in between clicks.
+  button (str, int, optional): The mouse button released. TODO
+
+Returns:
+  None
+
+Raises:
+  PyAutoGUIException: If button is not one of 'left', 'middle', 'right', 1, 2, 3, 4,
+    5, 6, or 7</doc>
+</kw>
+<kw name="Typewrite" lineno="1653">
+<arguments>
+<arg>message</arg>
+<arg>interval=0.0</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.
+
+The message argument can also be list of strings, in which case any valid
+keyboard name can be used.
+
+Since this performs a sequence of keyboard presses and does not hold down
+keys, it cannot be used to perform keyboard shortcuts. Use the hotkey()
+function for that.
+
+Args:
+  message (str, list): If a string, then the characters to be pressed. If a
+    list, then the key names of the keys to press in order. The valid names
+    are listed in KEYBOARD_KEYS.
+  interval (float, optional): The number of seconds in between each press.
+    0.0 by default, for no pause in between presses.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Use Image Not Found Exception" lineno="271">
+<arguments>
+<arg>value=None</arg>
+</arguments>
+<doc>When called with no arguments, PyAutoGUI will raise ImageNotFoundException when the PyScreeze locate*() functions
+can't find the image it was told to locate. The default behavior is to return None. Call this function with no
+arguments (or with True as the argument) to have exceptions raised, which is a better practice.
+
+You can also disable raising exceptions by passing False for the argument.</doc>
+</kw>
+<kw name="Vscroll" lineno="1228">
+<arguments>
+<arg>clicks</arg>
+<arg>x=None</arg>
+<arg>y=None</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs an explicitly vertical scroll of the mouse scroll wheel,
+if this is supported by the operating system. (Currently just Linux.)
+
+The x and y parameters detail where the mouse event happens. If None, the
+current mouse position is used. If a float value, it is rounded down. If
+outside the boundaries of the screen, the event happens at edge of the
+screen.
+
+Args:
+  clicks (int, float): The amount of scrolling to perform.
+  x (int, float, None, tuple, optional): The x position on the screen where the
+    click happens. None by default. If tuple, this is used for x and y.
+  y (int, float, None, optional): The y position on the screen where the
+    click happens. None by default.
+
+Returns:
+  None</doc>
+</kw>
+<kw name="Write" lineno="1653">
+<arguments>
+<arg>message</arg>
+<arg>interval=0.0</arg>
+<arg>logScreenshot=None</arg>
+<arg>_pause=True</arg>
+</arguments>
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.
+
+The message argument can also be list of strings, in which case any valid
+keyboard name can be used.
+
+Since this performs a sequence of keyboard presses and does not hold down
+keys, it cannot be used to perform keyboard shortcuts. Use the hotkey()
+function for that.
+
+Args:
+  message (str, list): If a string, then the characters to be pressed. If a
+    list, then the key names of the keys to press in order. The valid names
+    are listed in KEYBOARD_KEYS.
+  interval (float, optional): The number of seconds in between each press.
+    0.0 by default, for no pause in between presses.
+
+Returns:
+  None</doc>
+</kw>
+</keywordspec>
