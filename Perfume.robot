@@ -1,7 +1,7 @@
 *** Settings ***
 
 Resource        ../Resources/base.robot
-Resource        ../Pages/MPR.005_Page.robot
+Resource        ../Pages/Perfume_Page.robot
 Resource        ../Pages/GlobalPage.robot
 #Resource        ../Resources/BDDpt-br.robot
 

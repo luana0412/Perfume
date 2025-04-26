@@ -14,7 +14,7 @@ Resource                ../Resources/json.robot
 Library                 JSONLibrary
 
 *** Variables ***
-${JSON_SRC}      TestData/massa_SIMPR.json 
+${JSON_SRC}      massa.json 
 ${SEQUENCIAL}    0
 
 *** Keywords ***
