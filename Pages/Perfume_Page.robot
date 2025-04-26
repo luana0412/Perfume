@@ -31,84 +31,46 @@ E clico na opção "carrinho" para verificar a compra
    BuiltIn.Sleep    3
   Capturar print tela
 
-E seleciono no menu "Auditoria e Log"
-    Acessar no menu "Auditoria e Log" 
+E clico em "Pagar"
+    Acessar a opção "Pagar" 
     Capturar print tela
     
-E Aciono o submenu "Títulos"
-    Acessar no menu Protesto "Títulos" 
+Então o sistema apresenta a tela com as opções da compra e a opção de pagamento 
+    Element Should Contain           //*[@id="cart"]/div/div[3]/div/div[2]/div/a     Ir para pagamento 
+    BuiltIn.Sleep    3
+    Capturar print tela
 
-E informo o Beneficiário conforme a massa
-  ${BENEFICIARIO} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0002_Cod_Beneficiario
-  Click Element    //*[@id="inputCodBeneficiario"]
-  Press Keys    None    ${BENEFICIARIO} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
+#######----Perfume Luana - varios perfumes------#######
 
-E clico em "Filtrar"
-    Click Button    //*[@id="btn-filtrar"]
-    BuiltIn.Sleep   3
+E Seleciono varios perfumes para compra
+    Acessar no menu "Perfume Essencial" 
+    Capturar print tela
+    BuiltIn.Sleep    3
+    Acessar no menu "Perfume Elegante" 
+    Capturar print tela
+    BuiltIn.Sleep    3
+    Acessar no menu "Perfume Casual" 
+    Capturar print tela
+    BuiltIn.Sleep    3
 
-#Então o sistema exibirá os dados correspondente a informação inserida na pesquisa, no local de resultado da pesquisa da filtragem
-  #Então o sistema apresenta a mensagem de inclusão com sucesso
-  #BuiltIn.Sleep   1
-  #Page Should Contain    Título incluído com sucesso.
-  #Capture Page Screenshot  
+ Então o sistema apresenta a tela com todas as opções da compra
+    Element Should Contain           //*[@id="cart"]/div/div[3]/div/h3[1]/strong     R$ 1.080,00
+    BuiltIn.Sleep    3
+    Capturar print tela
 
-#####-----MPR.005.003.Página Inicial - Filtrar Busca de Títulos – Beneficiário
-E informo o Beneficiário conforme a massa MPR_005_0003_Beneficiario
-  ${BENEF} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0003_Benef
-  Click Element    //*[@id="inputBeneficiario"]
-  Input Text    //*[@id="inputBeneficiario"]   ${BENEF}  
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
+#######----Perfume Luana - esvaziar carrinho------#######
+E clico na opção "carrinho"
+  Scroll Element Into View       //*[@id="navbarNav"]/ul/li[5]/a
+   Click Element    //*[@id="navbarNav"]/ul/li[5]/a
+   BuiltIn.Sleep    3
+  Capturar print tela
 
-#####-----MPR.005.004.Página Inicial - Filtrar Busca de Títulos – CPF/CNPJ do Beneficiário
-E informo o Beneficiário conforme a massa MPR_005_0004_CNPJ
-  ${CNPJ} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0004_CNPJ
-  Click Element    //*[@id="inputCpfCnpjBeneficiario"]
-  Press Keys    None    ${CNPJ} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
-
-####------MPR.005.005.Página Inicial - Filtrar Busca de Títulos – Pagador 
-E informo o Beneficiário conforme a massa MPR_005_0005_Pagador
-  ${Pagador} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0005_Pagador
-  Click Element    //*[@id="inputPagador"]
-  Press Keys    None    ${Pagador} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
-
-####------MPR.005.006.Página Inicial - Filtrar Busca de Títulos – Situação
-E informo o Beneficiário conforme a massa MPR_005_0006_Situação 
-  ${PROTESTADO} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0006_Situacao
-  Click Element    //*[@id="inputSituacao"]
-  Press Keys    None    ${PROTESTADO} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
-
-####------MPR.005.007.Página Inicial - Filtrar Busca de Títulos – Emissão Fim
-E informo o Beneficiário conforme a massa MPR_005_0007_Emissao
-  ${EMISSAO} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0007_Emissao
-  Click Element    //*[@id="inputDtVencimentoFinal"]
-  Press Keys    None    ${EMISSAO} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
-
-####------MPR.005.008.Página Inicial - Filtrar Busca de Títulos – Vencimento Início  
-E informo o Beneficiário conforme a massa MPR_005_0008_Vencimento
-  ${Vencimento} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0008_Vencimento
-  Click Element    //*[@id="inputDtVencimentoInicial"]
-  Press Keys    None    ${Vencimento} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
-
-####------MPR.005.009.Página Inicial - Detalhar Títulos Pendentes ou com Erros
-E informo o Beneficiário conforme a massa MPR_005_0009_Erros
-  ${ERROS} =       Pegar valor do Json    ${SEQUENCIAL}    MPR_005_0009_Erros
-  Click Element    //*[@id="inputDtVencimentoFinal"]
-  Press Keys    None    ${ERROS} 
-  BuiltIn.Sleep    3
-  Capture Page Screenshot
-
+E clico em "esvaziar carrinho"
+    Click Element                               //*[@id="cart"]/div/div[2]/div/div/div/div[1]/form/button 
+    BuiltIn.Sleep    3
+    Capturar print tela
   
+Então o sistema apresenta a tela com o carrinho vazio
+  Page Should Contain Element           //*[@id="cart"]/div/div[2]/div/p     
+  BuiltIn.Sleep    3
+  Capturar print tela

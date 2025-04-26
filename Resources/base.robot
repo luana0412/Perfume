@@ -13,7 +13,6 @@ Library                 JSONLibrary
 
 *** Variables ***
 ${BROWSER}       Chrome          
-#${BROWSER}       headlesschrome   
 ${LOADING}       //*[@class='modalBgLoading'][(contains(@style,'block;'))]
 ${edgepath}      C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe
 
@@ -27,11 +26,8 @@ Abrir Navegador
     ${URL}    Pegar valor do Json    ${SEQUENCIAL}    URL
     Open Browser                         ${URL}             ${BROWSER}        
     Maximize Browser Window
-    #${DATA_ATUAL}=                      Get Current Date                                                  result_format=%d.%m.%Y_%H%M
-    #Set Suite Variable                  ${DATA_ATUAL}
     Capturar print tela
     Register Keyword To Run On Failure    Capturar print tela
-    #Upload anexo RQM    Evidencia    ${OUTPUT DIR}    log    html
 
 Finalizar
     Close Browser
