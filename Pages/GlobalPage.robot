@@ -15,18 +15,16 @@ aguarda página
 
 
 Acessar no menu "${OPCAO}"
-    Run Keyword If   '${OPCAO}' == 'Protesto'                          Click Element     //*[@id="navbarDropdownProtesto"]
-    Run Keyword If   '${OPCAO}' == 'Remessas'                          Click Element     //*[@id="navbarDropdownRemessas"]
-    Run Keyword If   '${OPCAO}' == 'Configurações'                     Click Element     //*[@id="navbarDropdownConfiguracoes"]
-    Run Keyword If   '${OPCAO}' == 'Auditoria e Log'                    Click Element     //*[@id="navbarDropdownAuditoriaLog"]
-    Run Keyword If   '${OPCAO}' == 'Relatórios'                        Click Element     //*[@id="navbarDropdownRelatorios"]
-    Run Keyword If   '${OPCAO}' == 'Arquivos'                          Click Element     //*[@id="navbarDropdownArquivos"]
-    Run Keyword If   '${OPCAO}' == 'Manutenção'                        Click Element     //*[@id="navbarDropdownManutencao"]
-    Run Keyword If   '${OPCAO}' == 'Ajuda'                             Click Element     //*[@id="navbarDropdown"]
+    Run Keyword If   '${OPCAO}' == 'Perfume Essencial'                          Scroll Element Into View      //*[@id="product"]/div[2]/div[2]/div[1]/div/div/button   
+    Click Element    //*[@id="product"]/div[2]/div[2]/div[1]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Elegante'                           Click Element     //*[@id="product"]/div[2]/div[2]/div[2]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Casual'                             Click Element     //*[@id="product"]/div[2]/div[2]/div[3]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Intenso'                            Click Element     //*[@id="product"]/div[2]/div[2]/div[4]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Suave'                              Click Element     //*[@id="product"]/div[2]/div[2]/div[5]/div/div/button
     aguarda página
     Unselect Frame
 
-Acessar no menu Protesto "${OPCAO}" 
+ Acessar no menu Protesto "${OPCAO}" 
     Run Keyword If   '${OPCAO}' == 'Títulos'                               Click Element     //*[@id="protesto"]/div/a[1]
     Run Keyword If   '${OPCAO}' == 'Custas'                                Click Element     //*[@id="protesto"]/div/a[2]
     Run Keyword If   '${OPCAO}' == 'Desistência de Protestos'              Click Element     //*[@id="protesto"]/div/a[3]

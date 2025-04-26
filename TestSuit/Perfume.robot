@@ -12,26 +12,16 @@ Resource                ../Resources/json.robot
 Library                 JSONLibrary
 
 Suite Setup        Abrir Navegador       1
-Test Setup         Realizar Login
-#Test Teardown      Finalizar
+Test Teardown      Finalizar
 
 *** Test Cases ***
 
-MPR.005.0001-Página Inicial - Tela Principal
+Perfume Luana
   [Tags]       CT001
-  Dado que acesso o menu principal
-  E seleciono no menu "Protesto"
-  E Aciono o submenu "Títulos"
-  E informo o Beneficiário conforme a massa
-  E clico em "Filtrar"
+  Dado que acesso o menu "Nosso Produto"
+  E Seleciono o perfume "Perfume Essencial"
+  E clico na opção "carrinho" para verificar a compra
+  # E clico em "Pagar"
+  # Então o sistema apresenta a tela com as opções da compra e a opção de pagamento
 
-
-MPR.005.002.Página Inicial - Filtrar Busca de Títulos – Código do Beneficiário
-  [Tags]        CT001
-  Dado que acesso o menu principal
-  E seleciono no menu "Protesto"
-  E Aciono o submenu "Títulos"
-  E informo o Beneficiário conforme a massa
-  E clico em "Filtrar"
-  #Então o sistema exibirá os dados correspondente a informação inserida na pesquisa, no local de resultado da pesquisa da filtragem	
 

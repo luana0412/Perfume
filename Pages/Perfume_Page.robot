@@ -14,18 +14,22 @@ Library                 JSONLibrary
 
 
 *** Keywords ***
-#######----MPR.005.002.Página Inicial - Filtrar Busca de Títulos – Código do Beneficiário
-Dado que acesso o menu principal
-    Click Element             //*[@id="menu-button"]
+#######----Perfume Luana------#######
+ Dado que acesso o menu "Nosso Produto"
+    Scroll Element Into View                   //html/body/section[1]/div[2]/a[2]
+    Click Element                                //html/body/section[1]/div[2]/a[2]   
+    BuiltIn.Sleep    3
     Capturar print tela
     
-E seleciono no menu "Protesto"
-    Acessar no menu "Protesto" 
+E Seleciono o perfume "Perfume Essencial"
+    Acessar no menu "Perfume Essencial" 
     Capturar print tela
 
-E seleciono no menu "Manutenção"
-    Acessar no menu "Manutenção" 
-    Capturar print tela
+E clico na opção "carrinho" para verificar a compra
+   Scroll Element Into View       //*[@id="navbarNav"]/ul/li[5]/a
+   Click Element    //*[@id="navbarNav"]/ul/li[5]/a
+   BuiltIn.Sleep    3
+  Capturar print tela
 
 E seleciono no menu "Auditoria e Log"
     Acessar no menu "Auditoria e Log" 
