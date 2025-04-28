@@ -15,12 +15,14 @@ aguarda página
 
 
 Acessar no menu "${OPCAO}"
-    Run Keyword If   '${OPCAO}' == 'Perfume Essencial'                          Scroll Element Into View      //*[@id="product"]/div[2]/div[2]/div[1]/div/div/button   
+    Run Keyword If   '${OPCAO}' == 'Perfume Essencial'                                                      Scroll Element Into View      //*[@id="product"]/div[2]/div[2]/div[1]/div/div/button   
     Click Element    //*[@id="product"]/div[2]/div[2]/div[1]/div/div/button
-    Run Keyword If   '${OPCAO}' == 'Perfume Elegante'                                                    click Element     //*[@id="product"]/div[2]/div[2]/div[2]/div/div/button
-    Run Keyword If   '${OPCAO}' == 'Perfume Casual'                                                      click Element     //*[@id="product"]/div[2]/div[2]/div[3]/div/div/button
-    Run Keyword If   '${OPCAO}' == 'Perfume Intenso'                                                     click Element     //*[@id="product"]/div[2]/div[2]/div[4]/div/div/button
-    Run Keyword If   '${OPCAO}' == 'Perfume Suave'                                                       Click Element      //*[@id="product"]/div[2]/div[2]/div[5]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Elegante'                                                      Scroll Element Into View    //*[@id="product"]/div[2]/div[2]/div[2]/div/div/button                                                
+    click Element     //*[@id="product"]/div[2]/div[2]/div[2]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Casual'                                                        Scroll Element Into View   //*[@id="product"]/div[2]/div[2]/div[3]/div/div/button                                            
+    click Element     //*[@id="product"]/div[2]/div[2]/div[3]/div/div/button
+    Run Keyword If   '${OPCAO}' == 'Perfume Intenso'                                                       click Element     //*[@id="product"]/div[2]/div[2]/div[4]/div/div/button                       
+    Run Keyword If   '${OPCAO}' == 'Perfume Suave'                                                         Click Element      //*[@id="product"]/div[2]/div[2]/div[5]/div/div/button
     aguarda página
     Unselect Frame
 

@@ -37,6 +37,7 @@ Perfume Luana - Varios perfumes
 Perfume Luana - Esvaziar Carrinho
   [Tags]       CT003
   Dado que acesso o menu "Nosso Produto"
+  E Seleciono o perfume "Perfume Essencial"
   E clico na opção "carrinho"
   E clico em "esvaziar carrinho"
   Então o sistema apresenta a tela com o carrinho vazio

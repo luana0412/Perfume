@@ -49,16 +49,17 @@ E Seleciono varios perfumes para compra
     Acessar no menu "Perfume Elegante" 
     Capturar print tela
     BuiltIn.Sleep    3
-    Acessar no menu "Perfume Casual" 
-    Capturar print tela
-    BuiltIn.Sleep    3
 
  Então o sistema apresenta a tela com todas as opções da compra
-    Element Should Contain           //*[@id="cart"]/div/div[3]/div/h3[1]/strong     R$ 1.080,00
+    Element Should Contain           //*[@id="cart"]/div/div[3]/div/div[2]/div/a     Ir para pagamento 
     BuiltIn.Sleep    3
     Capturar print tela
 
 #######----Perfume Luana - esvaziar carrinho------#######
+E Seleciono o perfume "Perfume Suave"
+    Acessar no menu "Perfume Suave" 
+    Capturar print tela
+    BuiltIn.Sleep    3
 E clico na opção "carrinho"
   Scroll Element Into View       //*[@id="navbarNav"]/ul/li[5]/a
    Click Element    //*[@id="navbarNav"]/ul/li[5]/a
